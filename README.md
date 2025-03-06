@@ -22,11 +22,12 @@ Through these solutions, I demonstrate the following skills:
 
  ## How to Navigate This Repository
 
-1. Each problem has its own file (e.g., 'SelectQueries.md', `OrderByqueries.md`, 'WhereAndLikeQueries.md ).
+1. Each problem has its own file (e.g., `OrderByQueries.md`, `WhereAndLikeQueries.md`, `SelectQueries.md`).
 2. Open the file to view:
    - The question statement.
    - The SQL query I wrote to solve the problem.
 3. Feel free to clone the repository and test the queries in your own database environment.
+
 
 ## Contact Me
 
