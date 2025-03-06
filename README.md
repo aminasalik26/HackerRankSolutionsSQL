@@ -9,7 +9,7 @@ This repository is a collection of my solutions to SQL problems from HackerRank.
 - Solve real world problems using SQL.
 - Understand and work with different types of SQL queries (e.g., filtering, sorting, aggregations, joins, etc.).
 
-- Each solution includes:
+Each solution includes:
 - The problem statement.
 - The SQL query I wrote to solve the problem.
 
@@ -33,3 +33,7 @@ Through these solutions, I demonstrate the following skills:
 If you have any questions or would like to discuss my work, feel free to reach out:
 - **Email**: [aminasalik26@gmail.com](mailto:amiansalik26@gmaile.com)
 - **LinkedIn**: [amina-salik](https://www.linkedin.com/in/amina-salik)
+
+---
+
+Thank you for visiting my repository! I hope my solutions demonstrate my SQL skills and problem solving abilities. 😊
