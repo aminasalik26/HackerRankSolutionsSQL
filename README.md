@@ -1,13 +1,13 @@
 # HackerRankSQL
 
-Welcome to my **SQL Solutions Repository**! This repository contains my solutions to various SQL problems from HackerRank. Each solution is carefully crafted, thoroughly explained, and demonstrates my ability to write efficient and effective SQL queries.
+Welcome to my **SQL Solutions Repository**! This repository contains my solutions to various SQL problems from HackerRank. Each solution is carefully crafted and demonstrates my ability to write efficient and effective SQL queries.
 
 ## About This Repository
 
 This repository is a collection of my solutions to SQL problems from HackerRank. It showcases my ability to:
-- Write clean, efficient, and optimised SQL queries.
+- Write clean, efficient and optimised SQL queries.
 - Solve real world problems using SQL.
-- Understand and work with different types of SQL queries (e.g., filtering, sorting, aggregations, joins, etc.).
+- Understand and work with different types of SQL queries (e.g., WHERE, LIKE, ORDER BY, etc.).
 
 Each solution includes:
 - The problem statement.
@@ -16,7 +16,7 @@ Each solution includes:
 ## Skills Demonstrated
 
 Through these solutions, I demonstrate the following skills:
-- **Proficiency in SQL**: Writing complex queries, using functions, and optimizing performance.
+- **Proficiency in SQL**: Writing  queries, using functions, and optimising performance.
 - **Problem-Solving**: Breaking down problems and designing efficient solutions.
 - **Attention to Detail**: Ensuring accuracy and handling edge cases.
 
