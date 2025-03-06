@@ -1,6 +1,5 @@
 # 1. Query all columns for all American cities in the `CITY` table with populations larger than 100,000. The `CountryCode` for America is `USA`.
 
-
 The `CITY` table is described as follows:
 
 | Field        | Type         | Description                        |
@@ -22,3 +21,77 @@ FROM
 WHERE
     COUNTRYCODE = 'USA'
     AND POPULATION > 100000;
+
+
+
+
+# 2. Query the `NAME` field for all American cities in the `CITY` table with populations larger than 120,000. The `CountryCode` for America is `USA`.
+
+The `CITY` table is described as follows:
+
+| Field        | Type         | Description                        |
+|--------------|--------------|------------------------------------|
+| ID           | NUMBER       | Unique identifier for the city     |
+| NAME         | VARCHAR2(17) | Name of the city                   |
+| COUNTRYCODE  | VARCHAR2(3)  | Country code (e.g., 'USA')         |
+| DISTRICT     | VARCHAR2(20) | District where the city is located |
+| POPULATION   | NUMBER       | Population of the city             |
+
+
+## SQL Solution
+
+SELECT
+    NAME
+FROM
+    CITY
+WHERE
+    COUNTRYCODE = 'USA'
+    AND POPULATION > 120000;
+
+
+
+
+# 3. Query all columns (attributes) for every row in the `CITY` table.
+
+The `CITY` table is described as follows:
+
+| Field        | Type         | Description                     |
+|--------------|--------------|---------------------------------|
+| ID           | NUMBER       | Unique identifier for the city  |
+| NAME         | VARCHAR2(17) | Name of the city                |
+| COUNTRYCODE  | VARCHAR2(3)  | Country code (e.g., 'USA')       |
+| DISTRICT     | VARCHAR2(20) | District where the city is located |
+| POPULATION   | NUMBER       | Population of the city          |
+
+
+## SQL Solution
+
+SELECT 
+    *
+FROM
+    CITY;
+
+
+
+
+# 4. Query all columns for a city in the `CITY` table with the ID `1661`.
+
+The `CITY` table is described as follows:
+
+| Field        | Type         | Description                     |
+|--------------|--------------|---------------------------------|
+| ID           | NUMBER       | Unique identifier for the city  |
+| NAME         | VARCHAR2(17) | Name of the city                |
+| COUNTRYCODE  | VARCHAR2(3)  | Country code (e.g., 'USA')       |
+| DISTRICT     | VARCHAR2(20) | District where the city is located |
+| POPULATION   | NUMBER       | Population of the city          |
+
+
+## SQL Solution
+
+SELECT
+    *
+FROM 
+    CITY
+WHERE
+    ID = 1661;
