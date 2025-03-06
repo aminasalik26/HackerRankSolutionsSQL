@@ -7,7 +7,7 @@ Welcome to my **SQL Solutions Repository**! This repository contains my solution
 This repository is a collection of my solutions to SQL problems from HackerRank. It showcases my ability to:
 - Write clean, efficient and optimised SQL queries.
 - Solve real world problems using SQL.
-- Understand and work with different types of SQL queries (e.g., WHERE, LIKE, ORDER BY, etc.).
+- Understand and work with different types of SQL queries (e.g., WHERE, LIKE, CASE, etc.).
 
 Each solution includes:
 - The problem statement.
