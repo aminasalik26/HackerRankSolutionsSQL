@@ -1,0 +1,111 @@
+# QUESTION 1) Query a list of `CITY` names from `STATION` for cities that have an even `ID` number. Print the results in any order, but exclude duplicates from the answer.
+
+The `STATION` table is described as follows:
+
+| Field  | Type           | Description                        |
+|--------|----------------|------------------------------------|
+| ID     | NUMBER         | Unique identifier for the station  |
+| CITY   | VARCHAR2(21)   | Name of the city                   |
+| STATE  | VARCHAR2(2)    | State where the city is located    |
+| LAT_N  | NUMBER         | Latitude coordinate of the station |
+| LONG_W | NUMBER         | Longitude coordinate of the station|
+
+
+## SQL SOLUTION
+
+SELECT DISTINCT
+    CITY
+FROM 
+    STATION
+WHERE
+    ID % 2 = 0;
+
+
+
+
+# QUESTION 2) Find the difference between the total number of `CITY` entries in the table and the number of distinct `CITY` entries in the table.
+
+The `STATION` table is described as follows:
+
+| Field  | Type           | Description                        |
+|--------|----------------|------------------------------------|
+| ID     | NUMBER         | Unique identifier for the station  |
+| CITY   | VARCHAR2(21)   | Name of the city                   |
+| STATE  | VARCHAR2(2)    | State where the city is located    |
+| LAT_N  | NUMBER         | Latitude coordinate of the station |
+| LONG_W | NUMBER         | Longitude coordinate of the station|
+
+
+## SQL SOLUTION
+
+SELECT 
+    COUNT(CITY) - COUNT(DISTINCT CITY) 
+    AS DIFFERENCES
+FROM 
+    STATION;
+
+
+
+
+# QUESTION 3) Query the two cities in `STATION` with the shortest and longest `CITY` names, as well as their respective lengths (i.e.: number of characters in the name). If there is more than one smallest or largest city, choose the one that comes first when ordered alphabetically.
+
+The `STATION` table is described as follows:
+
+| Field  | Type           | Description                        |
+|--------|----------------|------------------------------------|
+| ID     | NUMBER         | Unique identifier for the station  |
+| CITY   | VARCHAR2(21)   | Name of the city                   |
+| STATE  | VARCHAR2(2)    | State where the city is located    |
+| LAT_N  | NUMBER         | Latitude coordinate of the station |
+| LONG_W | NUMBER         | Longitude coordinate of the station|
+
+
+## SQL SOLUTION
+
+### Shortest City Name
+SELECT
+    CITY, LENGTH(CITY) AS NAMELENGTH
+FROM
+    STATION
+ORDER BY
+    LENGTH(CITY) ASC, CITY
+LIMIT
+    1;
+
+### Longest City Name
+SELECT
+    CITY, LENGTH(CITY) AS NAMELENGTH
+FROM
+    STATION
+ORDER BY
+    LENGTH(CITY) DESC, CITY
+LIMIT
+    1;
+
+
+
+
+# QUESTION 4) Query the list of `CITY` names starting with vowels (i.e., a, e, i, o, or u) from `STATION`. Your result cannot contain duplicates.
+
+The `STATION` table is described as follows:
+
+| Field  | Type           | Description                        |
+|--------|----------------|------------------------------------|
+| ID     | NUMBER         | Unique identifier for the station  |
+| CITY   | VARCHAR2(21)   | Name of the city                   |
+| STATE  | VARCHAR2(2)    | State where the city is located    |
+| LAT_N  | NUMBER         | Latitude coordinate of the station |
+| LONG_W | NUMBER         | Longitude coordinate of the station|
+
+
+## SQL SOLUTION
+
+SELECT DISTINCT(CITY)
+FROM
+    STATION
+WHERE
+    CITY LIKE 'A%'
+    OR CITY LIKE 'E%'
+    OR CITY LIKE 'I%'
+    OR CITY LIKE 'O%'
+    OR CITY LIKE 'U%';
