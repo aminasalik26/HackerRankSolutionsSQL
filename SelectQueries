@@ -3,13 +3,13 @@
 
 The `CITY` table is described as follows:
 
-| Field        | Type         | Description                     |
-|--------------|--------------|---------------------------------|
-| ID           | NUMBER       | Unique identifier for the city  |
-| NAME         | VARCHAR2(17) | Name of the city                |
-| COUNTRYCODE  | VARCHAR2(3)  | Country code (e.g., 'USA')       |
+| Field        | Type         | Description                        |
+|--------------|--------------|------------------------------------|
+| ID           | NUMBER       | Unique identifier for the city     |
+| NAME         | VARCHAR2(17) | Name of the city                   |
+| COUNTRYCODE  | VARCHAR2(3)  | Country code (e.g., 'USA')         |
 | DISTRICT     | VARCHAR2(20) | District where the city is located |
-| POPULATION   | NUMBER       | Population of the city          |
+| POPULATION   | NUMBER       | Population of the city             |
 
 
 
