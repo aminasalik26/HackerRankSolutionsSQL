@@ -22,7 +22,6 @@ WHERE
 
 
 
-
 # QUESTION 2) Find the difference between the total number of `CITY` entries in the table and the number of distinct `CITY` entries in the table.
 
 The `STATION` table is described as follows:
@@ -84,7 +83,6 @@ LIMIT
 
 
 
-
 # QUESTION 4) Query the list of `CITY` names starting with vowels (i.e., a, e, i, o, or u) from `STATION`. Your result cannot contain duplicates.
 
 The `STATION` table is described as follows:
@@ -109,6 +107,7 @@ WHERE
     OR CITY LIKE 'I%'
     OR CITY LIKE 'O%'
     OR CITY LIKE 'U%';
+
 
 
 
@@ -196,3 +195,103 @@ WHERE
     AND CITY NOT LIKE 'i%'
     AND CITY NOT LIKE 'o%'
     AND CITY NOT LIKE 'u%';
+
+
+
+
+# QUESTION 8) Query the list of `CITY` names from `STATION` that do not end with vowels. Your result cannot contain duplicates.
+
+The `STATION` table is described as follows:
+
+| Field  | Type           | Description                        |
+|--------|----------------|------------------------------------|
+| ID     | NUMBER         | Unique identifier for the station  |
+| CITY   | VARCHAR2(21)   | Name of the city                   |
+| STATE  | VARCHAR2(2)    | State where the city is located    |
+| LAT_N  | NUMBER         | Latitude coordinate of the station |
+| LONG_W | NUMBER         | Longitude coordinate of the station|
+
+
+## SQL SOLUTION
+
+SELECT DISTINCT 
+    CITY
+FROM 
+    STATION
+WHERE 
+    CITY NOT LIKE '%a'
+    AND CITY NOT LIKE '%e'
+    AND CITY NOT LIKE '%i'
+    AND CITY NOT LIKE '%o'
+    AND CITY NOT LIKE '%u';
+
+
+
+
+# QUESTION 9) Query the list of `CITY` names from `STATION` that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
+
+The `STATION` table is described as follows:
+
+| Field  | Type           | Description                        |
+|--------|----------------|------------------------------------|
+| ID     | NUMBER         | Unique identifier for the station  |
+| CITY   | VARCHAR2(21)   | Name of the city                   |
+| STATE  | VARCHAR2(2)    | State where the city is located    |
+| LAT_N  | NUMBER         | Latitude coordinate of the station |
+| LONG_W | NUMBER         | Longitude coordinate of the station|
+
+
+## SQL SOLUTION
+
+SELECT DISTINCT 
+    CITY
+FROM 
+    STATION
+WHERE 
+    (CITY NOT LIKE 'a%'
+    AND CITY NOT LIKE 'e%'
+    AND CITY NOT LIKE 'i%'
+    AND CITY NOT LIKE 'o%'
+    AND CITY NOT LIKE 'u%')
+OR
+    (CITY NOT LIKE '%a'
+    AND CITY NOT LIKE '%e'
+    AND CITY NOT LIKE '%i'
+    AND CITY NOT LIKE '%o'
+    AND CITY NOT LIKE '%u');
+
+
+
+
+# QUESTION 10) Query the list of `CITY` names from `STATION` that do not start with vowels and do not end with vowels. Your result cannot contain duplicates.
+
+The `STATION` table is described as follows:
+
+| Field  | Type           | Description                        |
+|--------|----------------|------------------------------------|
+| ID     | NUMBER         | Unique identifier for the station  |
+| CITY   | VARCHAR2(21)   | Name of the city                   |
+| STATE  | VARCHAR2(2)    | State where the city is located    |
+| LAT_N  | NUMBER         | Latitude coordinate of the station |
+| LONG_W | NUMBER         | Longitude coordinate of the station|
+
+
+## SQL SOLUTION
+
+```sql
+SELECT DISTINCT 
+    CITY
+FROM 
+    STATION
+WHERE
+    (CITY NOT LIKE 'a%'
+    AND CITY NOT LIKE 'e%'
+    AND CITY NOT LIKE 'i%'
+    AND CITY NOT LIKE 'o%'
+    AND CITY NOT LIKE 'u%')
+AND
+    (CITY NOT LIKE '%a'
+    AND CITY NOT LIKE '%e'
+    AND CITY NOT LIKE '%i'
+    AND CITY NOT LIKE '%o'
+    AND CITY NOT LIKE '%u');
